@@ -24,97 +24,23 @@ mousetrack on
 # get rid of silly xoff stuff
 bind s split
 
+# annoying msgs don't last that much on the status line
+msgminwait 0
+msgwait 1
+
 # shortcut for closing screen completely
 bindkey "^_" quit  # Ctrl-/ quits screen
 
 # shortcuts for copying (scrollback) and pasting
-bindkey "^[[20;5~" copy     # Ctrl-F9 initiates copy mode
-bindkey "^[[21;5~" paste .  # Ctrl-F10 pastes the screen buffer
-
+bindkey "^[[23;5~" copy     # Ctrl-F11 initiates copy mode
+bindkey "^[[24;5~" paste .  # Ctrl-F12 pastes the screen buffer
 
 # default windows
-screen -t Shell1            1 bash
-screen -t Shell2            2 bash
-screen -t Shell3            3 bash
-screen -t Irssi-or-Shell4   4 irssi 2> /dev/null || bash
-screen -t Status            5 htop 2> /dev/null || top 2> /dev/null
-select 0
-bind c screen 1 # window numbering starts at 1 not 0
-bind 0 select 10
+source "default-windows.rc"
 
+# navigation and region management keybindings
+source "navbindings.rc"
 
-# mappings for regions and windows navigation and resizing
-# navigating regions with Ctrl-arrows
-bindkey "^[[1;5D" focus left
-bindkey "^[[1;5C" focus right
-bindkey "^[[1;5A" focus up
-bindkey "^[[1;5B" focus down
-
-# switch windows with F3 (prev) and F4 (next)
-bindkey "^[OR" prev
-bindkey "^[OS" next
-
-# F2 enters resize mode. Resize regions with hjkl, toggle focus with Tab and arrows.
-bindkey "^[OQ" eval "command -c rsz"  # enters resize mode
-bind -c rsz h eval "resize -h -5" "command -c rsz"  # h - decreases region height
-bind -c rsz j eval "resize -v -5" "command -c rsz"  # j - decreases region width
-bind -c rsz k eval "resize -v +5" "command -c rsz"  # k - increases region height
-bind -c rsz l eval "resize -h +5" "command -c rsz"  # l - increases region width
-bind -c rsz \t    eval "focus"       "command -c rsz" # Tab - alternate focus
-bind -c rsz -k kl eval "focus left"  "command -c rsz" # Left - focus to the left
-bind -c rsz -k kr eval "focus right" "command -c rsz" # Right - focus to the right
-bind -c rsz -k ku eval "focus up"    "command -c rsz" # Up - focus upwards
-bind -c rsz -k kd eval "focus down"  "command -c rsz" # Down - focus downward
-
-
-
-# layouts
-layout autosave on
-
-# single region
-layout new singleshell
-select 1
-
-# two regions, for edit/test, work/status and work/irssi
-layout new shellshell  # edit/test
-select 1
-split
-resize -v +9
-focus down
-select 2
-layout new shellstatus  # work/status
-select 1
-split
-resize -v -7
-focus down
-select 5
-layout new shellirssi  # work/irssi
-select 1
-split
-resize -v -7
-focus down
-select 4
-
-# three regions
-layout new threeshells
-select 1
-split
-resize -v +8
-focus down
-select 2
-split -v
-resize -h +10
-focus right
-select 3
-focus up
-
-layout select singleshell
-layout attach singleshell
-
-# bindings to jump directly to some desired layout
-bindkey "^[O1;5R"  layout select singleshell
-bindkey "^[O1;5S"  layout select shellshell
-bindkey "^[[15;5~" layout select threeshells
-bindkey "^[[17;5~" layout select shellirssi
-bindkey "^[[18;5~" layout select shellstatus
+# layout definitions
+source "layouts.rc"
 

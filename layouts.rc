@@ -1,0 +1,43 @@
+# layouts
+layout autosave on
+
+# single region
+layout new singleshell
+select 1
+
+# two regions, for edit/test, work/status and work/irssi
+layout new shellshell  # edit/test
+select 1
+split
+resize -v +9
+focus down
+select 2
+layout new shellstatus  # work/status
+select 1
+split
+resize -v -7
+focus down
+select 5
+layout new shellirssi  # work/irssi
+select 1
+split
+resize -v -7
+focus down
+select 4
+
+# three regions
+layout new threeshells
+select 1
+split
+resize -v +8
+focus down
+select 2
+split -v
+resize -h +10
+focus right
+select 3
+focus up
+
+layout select singleshell
+layout attach singleshell
+

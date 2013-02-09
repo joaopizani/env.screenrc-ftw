@@ -1,0 +1,55 @@
+# mappings for regions and windows navigation and resizing
+# navigating regions with Ctrl-arrows
+bindkey "^[[1;5D" focus left
+bindkey "^[[1;5C" focus right
+bindkey "^[[1;5A" focus up
+bindkey "^[[1;5B" focus down
+
+# switch between windows or select a precise window to go to. Use the shift
+# modifier to make the switch in ALL displays (including remote users).
+bindkey "^[O1;5Q"  prev  # C-F2
+bindkey "^[O1;5R"  next  # C-F3
+bindkey "^[O1;6Q"  at "%" prev  # C-S-F2
+bindkey "^[O1;6R"  at "%" next  # C-S-F3
+
+bindkey "^[O1;5S"  select 1  # C-F4
+bindkey "^[[15;5~" select 2  # C-F5
+bindkey "^[[17;5~" select 3  # C-F6
+bindkey "^[[18;5~" select 4  # C-F7
+bindkey "^[[19;5~" select 5  # C-F8
+bindkey "^[O1;6S"  at "%" select 1  # C-S-F4
+bindkey "^[[15;6~" at "%" select 2  # C-S-F5
+bindkey "^[[17;6~" at "%" select 3  # C-S-F6
+bindkey "^[[18;6~" at "%" select 4  # C-S-F7
+bindkey "^[[19;6~" at "%" select 5  # C-S-F8
+
+# switch between layouts, use the shift modifier to make the switch in ALL displays
+bindkey "^[[20;5~" layout prev  # C-F9
+bindkey "^[[21;5~" layout next  # C-F10
+bindkey "^[[20;6~" at "%" layout prev  # C-S-F9
+bindkey "^[[21;6~" at "%" layout next  # C-S-F10
+
+# C-S-F1 enters resize mode. Resize regions with hjkl, toggle focus with Tab and arrows
+# C-a R enters resize mode for ALL displays, the commands are sent to all clients
+bindkey "^[O1;6P" eval "command -c rs"  # enters resize mode
+bind -c rs h     eval "resize -h -5" "command -c rs"  # h - decreases height
+bind -c rs j     eval "resize -v -5" "command -c rs"  # j - decreases width
+bind -c rs k     eval "resize -v +5" "command -c rs"  # k - increases height
+bind -c rs l     eval "resize -h +5" "command -c rs"  # l - increases width
+bind -c rs \t    eval "focus"        "command -c rs"  # Tab - alternate focus
+bind -c rs -k kl eval "focus left"   "command -c rs"  # Left - focus left
+bind -c rs -k kr eval "focus right"  "command -c rs"  # Right - focus right
+bind -c rs -k ku eval "focus up"     "command -c rs"  # Up - focus upwards
+bind -c rs -k kd eval "focus down"   "command -c rs"  # Down - focus downward
+
+bind R  eval "command -c rsa"  # enters resize mode
+bind -c rsa h     eval "at \"%\" resize -h -5" "command -c rsa"  # h - decreases height
+bind -c rsa j     eval "at \"%\" resize -v -5" "command -c rsa"  # j - decreases width
+bind -c rsa k     eval "at \"%\" resize -v +5" "command -c rsa"  # k - increases height
+bind -c rsa l     eval "at \"%\" resize -h +5" "command -c rsa"  # l - increases width
+bind -c rsa \t    eval "at \"%\" focus"        "command -c rsa"  # Tab - alternate focus
+bind -c rsa -k kl eval "at \"%\" focus left"   "command -c rsa"  # Left - focus left
+bind -c rsa -k kr eval "at \"%\" focus right"  "command -c rsa"  # Right - focus right
+bind -c rsa -k ku eval "at \"%\" focus up"     "command -c rsa"  # Up - focus upwards
+bind -c rsa -k kd eval "at \"%\" focus down"   "command -c rsa"  # Down - focus downward
+
