@@ -25,7 +25,7 @@ Niceties
     * Paste: **Ctrl-F10**
   6. Set of nice default windows when Screen is launched:
     * Three shells (windows 1, 2 and 3)
-    * Status window (window 5) - can be wither htop (if the user has it) or plain top
+    * Status window (window 5) - can be either htop (if the user has it) or plain top
     * Irssi or Shell (window 4) - Irssi if the user has it, otherwise just plain shell
   7. Bindings to alternate between windows: **F3 (prev. window)** and **F4 (next window)**
   8. Set of nice default layouts, with keybindings to select each as you wish:
