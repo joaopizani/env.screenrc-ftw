@@ -36,14 +36,14 @@ bindkey "^[[23;5~" copy     # Ctrl-F11 initiates copy mode
 bindkey "^[[24;5~" paste .  # Ctrl-F12 pastes the screen buffer
 
 # default windows
-source 'defaultwindows.rc'
+source defaultwindows.rc
 
 # navigation and region management keybindings
-source 'navbindings.rc'
+source navbindings.rc
 
 # layout definitions
-source 'layouts.rc'
+source layouts.rc
 
 # multiuser acl definitions
-source 'multiuser.rc'
+source multiuser.rc
 
