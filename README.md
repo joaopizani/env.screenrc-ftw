@@ -7,7 +7,7 @@ Sit back and enjoy working on your terminal...
 Installation is so simple that it does not deserve the name "installation". Namely:
 
   1. Checkout this repository, and enter it: "cd screenrc-ftw"
-  2. Execute the included little script: "./mklink.sh"
+  2. Execute the included little script: "./install.sh"
 
 This will make your .screenrc in the home directory point to (source) the file inside this repo,
 and then the "installation" is DONE. In case there's an existing .screenrc, do not fear, a

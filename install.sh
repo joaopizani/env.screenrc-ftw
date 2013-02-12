@@ -15,5 +15,4 @@ if [ -e ${TARGET} ]; then  # only backup if it exists
 fi
 
 # making the link to the version in this repo
-ln -f -s ${DIR}/screenrc ${TARGET}
-
+echo "source ${DIR}/screenrc" > ${TARGET}
