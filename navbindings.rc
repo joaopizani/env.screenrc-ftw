@@ -32,10 +32,10 @@ bindkey "^[[21;6~" at "%" layout next  # C-S-F10
 # C-S-F1 enters resize mode. Resize regions with hjkl, toggle focus with Tab and arrows
 # C-a R enters resize mode for ALL displays, the commands are sent to all clients
 bindkey "^[O1;6P" eval "command -c rs"  # enters resize mode
-bind -c rs h     eval "resize -h -5" "command -c rs"  # h - decreases height
-bind -c rs j     eval "resize -v -5" "command -c rs"  # j - decreases width
-bind -c rs k     eval "resize -v +5" "command -c rs"  # k - increases height
-bind -c rs l     eval "resize -h +5" "command -c rs"  # l - increases width
+bind -c rs h     eval "resize -h -1" "command -c rs"  # h - decreases height
+bind -c rs j     eval "resize -v -1" "command -c rs"  # j - decreases width
+bind -c rs k     eval "resize -v +1" "command -c rs"  # k - increases height
+bind -c rs l     eval "resize -h +1" "command -c rs"  # l - increases width
 bind -c rs \t    eval "focus"        "command -c rs"  # Tab - alternate focus
 bind -c rs -k kl eval "focus left"   "command -c rs"  # Left - focus left
 bind -c rs -k kr eval "focus right"  "command -c rs"  # Right - focus right
@@ -43,10 +43,10 @@ bind -c rs -k ku eval "focus up"     "command -c rs"  # Up - focus upwards
 bind -c rs -k kd eval "focus down"   "command -c rs"  # Down - focus downward
 
 bind R  eval "command -c rsa"  # enters resize mode
-bind -c rsa h     eval "at \"%\" resize -h -5" "command -c rsa"  # h - decreases height
-bind -c rsa j     eval "at \"%\" resize -v -5" "command -c rsa"  # j - decreases width
-bind -c rsa k     eval "at \"%\" resize -v +5" "command -c rsa"  # k - increases height
-bind -c rsa l     eval "at \"%\" resize -h +5" "command -c rsa"  # l - increases width
+bind -c rsa h     eval "at \"%\" resize -h -1" "command -c rsa"  # h - decreases height
+bind -c rsa j     eval "at \"%\" resize -v -1" "command -c rsa"  # j - decreases width
+bind -c rsa k     eval "at \"%\" resize -v +1" "command -c rsa"  # k - increases height
+bind -c rsa l     eval "at \"%\" resize -h +1" "command -c rsa"  # l - increases width
 bind -c rsa \t    eval "at \"%\" focus"        "command -c rsa"  # Tab - alternate focus
 bind -c rsa -k kl eval "at \"%\" focus left"   "command -c rsa"  # Left - focus left
 bind -c rsa -k kr eval "at \"%\" focus right"  "command -c rsa"  # Right - focus right
