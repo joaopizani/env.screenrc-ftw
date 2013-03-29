@@ -37,15 +37,12 @@ Nice predefined windows and region layouts
 
   * Default windows when Screen is launched:
     - Three shells (windows 1, 2 and 3)
-    - Status window (window 5) - can be either htop (if the user has it) or plain top
-    - Irssi or Shell (window 4) - Irssi if the user has it, otherwise just plain shell
+    - Status window (window 4) - can be either htop (if the user has it) or plain top
   * Predefined layouts, among which you can easily alternate:
     - One shell, occupying the whole terminal (default when Screen starts)
     - Two shells, horizontally
     - Three shells, one big and two smaller ones in the bottom
-    - A shell and another program, horizontally
-      - Shell and Irssi (in case there is)
-      - Shell and System Status
+    - Shell and System Status
 
 Comfortable keybindings to navigate between windows and layouts
 ---------------------------------------------------------------
@@ -54,10 +51,9 @@ Comfortable keybindings to navigate between windows and layouts
     - Go to previous window: **Ctrl-F2**
     - Go to next window: **Ctrl-F3**
   * Go directly to a specific window:
-    - Window 1 (Shell1): **Ctrl-F4**
-    - Window 2 (Shell2): **Ctrl-F5**
-    - Window 3 (Shell3): **Ctrl-F6**
-    - Window 4 (Irssi-or-Shell): **Ctrl-F7**
+    - Window 1 (Shell1): **Ctrl-F5**
+    - Window 2 (Shell2): **Ctrl-F6**
+    - Window 3 (Shell3): **Ctrl-F7**
     - Window 5 (Status): **Ctrl-F8**
   * Alternate between layouts:
     - Go to previous layout: **Ctrl-F9**
@@ -66,7 +62,7 @@ Comfortable keybindings to navigate between windows and layouts
   * If you want the navigation command to be **global** (sent to all displays, including
     remote ones), then use also the Shift modifier key together with Ctrl.
     - Previous/next window: **Ctrl-Shift-{F3,F4}**
-    - Go directly to one of the 5 predefined windows: **Ctrl-Shift-{F4,F5,F6,F7,F8}**
+    - Go directly to one of the 5 predefined windows: **Ctrl-Shift-{F5,F6,F7,F8}**
     - Previous/next layout: **Ctrl-Shift-{F9,F10}**
 
   * Finally, some nice keybindings to resize regions pretty easily:
