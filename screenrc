@@ -1,38 +1,10 @@
+# simple configs that are much generally useful and less taste-dependent
+source screenrc-simple.rc
+
 # the following two lines give a two-line status, with the current window highlighted
 hardstatus alwayslastline
 hardstatus string '%{= kG}[%{G}%H%? %1`%?%{g}][%= %{= kw}%-w%{+b yk} %n*%t%?(%u)%? %{-}%+w %=%{g}][%{B}%m/%d %{W}%C%A%{g}]'
 
-# huge scrollback buffer
-defscrollback 2000
-
-# no welcome message
-startup_message off
-
-# Fix to clean up residual editor text and etc.
-altscreen on
-
-# 256 colors
-term xterm-256color
-attrcolor b ".I"  # allow bold colors - necessary for some reason
-termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
-defbce on  # use current bg color for erased chars
-
-# mouse tracking allows to switch region focus by clicking on the region
-mousetrack on
-
-# get rid of silly xoff stuff
-bind s split
-
-# annoying msgs don't last that much on the status line
-msgminwait 0
-msgwait 2
-
-# shortcut for closing screen completely
-bindkey "^_" quit  # Ctrl-/ quits screen
-
-# shortcuts for copying (scrollback) and pasting
-bindkey "^[[23;5~" copy     # Ctrl-F11 initiates copy mode
-bindkey "^[[24;5~" paste .  # Ctrl-F12 pastes the screen buffer
 
 # default windows
 source defaultwindows.rc
