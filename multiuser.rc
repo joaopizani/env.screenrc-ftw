@@ -1,3 +1,5 @@
+sessionname shared
+
 multiuser on
 bind ^M multiuser off
 
