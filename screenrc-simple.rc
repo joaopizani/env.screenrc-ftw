@@ -29,3 +29,7 @@ bindkey "^_" quit  # Ctrl-/ quits screen
 # shortcuts for copying (scrollback) and pasting
 bindkey "^[[23;5~" copy     # Ctrl-F11 initiates copy mode
 bindkey "^[[24;5~" paste .  # Ctrl-F12 pastes the screen buffer
+
+# finally, any possible user-defined personalizations
+source "~/.screen-personalizations"
+
