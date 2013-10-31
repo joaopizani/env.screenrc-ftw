@@ -4,24 +4,20 @@ layout autosave on
 layout new singleshell
 select 1
 
-layout new shellshell
+layout new horizontalshells
 select 1
 split
 resize -v +9
 focus down
 select 2
 
-layout new threeshells
+layout new verticalshells
 select 1
-split
-resize -v +8
-focus down
-select 2
 split -v
-resize -h +10
+resize -h +3
 focus right
-select 3
-focus up
+select 2
+focus left
 
 layout new shellstatus
 select 1
