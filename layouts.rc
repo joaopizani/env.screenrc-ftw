@@ -14,7 +14,7 @@ select 2
 layout new verticalshells
 select 1
 split -v
-resize -h +3
+resize -h +4
 focus right
 select 2
 focus left
