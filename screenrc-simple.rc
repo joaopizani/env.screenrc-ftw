@@ -8,7 +8,7 @@ startup_message off
 altscreen on
 
 # 256 colors
-term xterm-256color
+term screen-256color
 attrcolor b ".I"  # allow bold colors - necessary for some reason
 termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
 defbce on  # use current bg color for erased chars
