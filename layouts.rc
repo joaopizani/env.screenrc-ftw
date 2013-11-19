@@ -1,31 +1,24 @@
 # layouts
 layout autosave on
 
-layout new singleshell
+layout new single
 select 1
 
-layout new horizontalshells
+layout new horizontal
 select 1
 split
 resize -v +9
 focus down
 select 2
 
-layout new verticalshells
+layout new vertical
 select 1
 split -v
-resize -h +4
+resize -h +5
 focus right
 select 2
 focus left
 
-layout new shellstatus
-select 1
-split
-resize -v -7
-focus down
-select 4
-
-layout select singleshell
-layout attach singleshell
+layout select single
+layout attach single
 

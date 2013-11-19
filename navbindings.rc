@@ -12,16 +12,16 @@ bindkey "^[O1;5R"  next  # C-F3
 bindkey "^[O1;6Q"  at "%" prev  # C-S-F2
 bindkey "^[O1;6R"  at "%" next  # C-S-F3
 
-bindkey "^[O1;5S"  select 0  # C-F4
-bindkey "^[[15;5~" select 1  # C-F5
-bindkey "^[[17;5~" select 2  # C-F6
-bindkey "^[[18;5~" select 3  # C-F7
-bindkey "^[[19;5~" select 4  # C-F8
-bindkey "^[O1;6S"  at "%" select 0  # C-S-F4
-bindkey "^[[15;6~" at "%" select 1  # C-S-F5
-bindkey "^[[17;6~" at "%" select 2  # C-S-F6
-bindkey "^[[18;6~" at "%" select 3  # C-S-F7
-bindkey "^[[19;6~" at "%" select 4  # C-S-F8
+bindkey "^[O1;5S"  select 1  # C-F4
+bindkey "^[[15;5~" select 2  # C-F5
+bindkey "^[[17;5~" select 3  # C-F6
+bindkey "^[[18;5~" select 4  # C-F7
+bindkey "^[[19;5~" select 5  # C-F8
+bindkey "^[O1;6S"  at "%" select 1  # C-S-F4
+bindkey "^[[15;6~" at "%" select 2  # C-S-F5
+bindkey "^[[17;6~" at "%" select 3  # C-S-F6
+bindkey "^[[18;6~" at "%" select 4  # C-S-F7
+bindkey "^[[19;6~" at "%" select 5  # C-S-F8
 
 # switch between layouts, use the shift modifier to make the switch in ALL displays
 bindkey "^[[20;5~" layout prev  # C-F9
