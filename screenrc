@@ -17,6 +17,3 @@ source layouts.rc
 
 # multiuser acl definitions
 source multiuser.rc
-
-# finally, any possible user-defined personalizations
-source "~/.screen-personalizations"
