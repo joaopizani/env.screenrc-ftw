@@ -7,10 +7,10 @@ DIR="$(cd -P "$(dirname $CANONICAL_SRC)" && pwd)"
 
 
 # making a backup of the current screenrc the user might have
-TARGET=${HOME}/.screenrc
+TARGET="${HOME}/.screenrc"
 if [ -e ${TARGET} ]; then  # only backup if it exists
     if [ ! -L ${TARGET} ]; then  # only if it is NOT a link
-        mv ${TARGET} ${TARGET}.bkp
+        mv ${TARGET} "${TARGET}.bkp"
     fi
 fi
 
