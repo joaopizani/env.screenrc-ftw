@@ -1,7 +1,6 @@
 sessionname shared
 
 multiuser on
-bind ^M multiuser off
 
 aclchg READERS +r-wx "#"
 aclchg READERS -rwx "?"
