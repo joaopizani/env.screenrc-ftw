@@ -1,34 +1,39 @@
-# huge scrollback buffer
 defscrollback 2000
-
-# no welcome message
 startup_message off
+mousetrack on
 
 # Fix to clean up residual editor text and etc.
 altscreen on
 
 # 256 colors
 term screen-256color
-attrcolor b ".I"  # allow bold colors - necessary for some reason
+attrcolor b ".I"
 termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
-defbce on  # use current bg color for erased chars
+defbce on
 
-# mouse tracking allows to switch region focus by clicking on the region
-mousetrack on
+# the following two lines give a 1-line status, with the current window highlighted
+hardstatus alwayslastline
+hardstatus string '%{= kG}[%{G}%H%? %1`%?%{g}][%= %{= kw}%-w%{+b yk} %n*%t%?(%u)%? %{-}%+w %=%{g}][%{B}%m/%d %{W}%C%A%{g}]'
 
 # get rid of silly xoff stuff
 bind s split
 
 # annoying msgs don't last that much on the status line
 msgminwait 0
-msgwait 2
+msgwait 1
 
-# shortcut for closing screen completely
-bindkey "^_" quit  # Ctrl-/ quits screen
+# shortcut (Ctrl-/) for closing screen completely
+bindkey "^_" quit
 
 # shortcuts for copying (scrollback) and pasting
 bindkey "^[[23;5~" copy     # Ctrl-F11 initiates copy mode
 bindkey "^[[24;5~" paste .  # Ctrl-F12 pastes the screen buffer
+
+# navigation and region management keybindings
+source navbindings.rc
+
+# layout definitions
+source layouts.rc
 
 # finally, any possible user-defined personalizations
 source "~/.screen-personalizations"
