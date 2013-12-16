@@ -35,6 +35,9 @@ source navbindings.rc
 # layout definitions
 source layouts.rc
 
+# bindings to activate scripts
+source script-bindings.rc
+
 # finally, any possible user-defined personalizations
 source "~/.screen-personalizations"
 

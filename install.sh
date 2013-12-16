@@ -17,4 +17,5 @@ fi
 # making the link to the version in this repo
 echo "source ${DIR}/screenrc" > ${TARGET}
 
-ln -s -f "${DIR}/screenrc-simple.rc" "${HOME}/.screenrc-simple"
+# link to screen-scripts dir
+ln -s -f "${DIR}/screen-scripts"   "${HOME}/.screen-scripts"
