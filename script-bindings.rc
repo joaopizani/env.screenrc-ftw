@@ -1,2 +1,2 @@
-bind ^t source "~/.screen-scripts/profile-4-windows.rc"
-bind ^m source "~/.screen-scripts/enable-multiuser.rc
+bind t source "~/.screen-scripts/profile-4-windows.rc"
+bind m source "~/.screen-scripts/enable-multiuser.rc"
