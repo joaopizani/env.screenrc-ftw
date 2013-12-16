@@ -1,11 +1,6 @@
-
 screen -t Shell1            1 bash
 screen -t Shell2            2 bash
 screen -t Shell3            3 bash
 screen -t Status            4 htop 2> /dev/null || top 2> /dev/null
 
-select 0
-bind c screen 1 # window numbering starts at 1 not 0
-bind 0 select 10
 select 1
-

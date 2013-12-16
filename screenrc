@@ -39,5 +39,5 @@ source layouts.rc
 source script-bindings.rc
 
 # finally, any possible user-defined personalizations
-source "~/.screen-personalizations"
+source "~/.screen-personalizations/screen-personalizations"
 
