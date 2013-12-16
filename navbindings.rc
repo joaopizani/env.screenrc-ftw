@@ -1,12 +1,17 @@
-# mappings for regions and windows navigation and resizing
 # navigating regions with Ctrl-arrows
+# shift modifier to switch in ALL displays (including remote users).
 bindkey "^[[1;5D" focus left
 bindkey "^[[1;5C" focus right
 bindkey "^[[1;5A" focus up
 bindkey "^[[1;5B" focus down
+bindkey "^[[1;6D" at "%" focus left
+bindkey "^[[1;6C" at "%" focus right
+bindkey "^[[1;6A" at "%" focus up
+bindkey "^[[1;6B" at "%" focus down
 
-# switch between windows or select a precise window to go to. Use the shift
-# modifier to make the switch in ALL displays (including remote users).
+
+# switch between windows or select a precise window to go to.
+# shift modifier to switch in ALL displays (including remote users).
 bindkey "^[O1;5Q"  prev  # C-F2
 bindkey "^[O1;5R"  next  # C-F3
 bindkey "^[O1;6Q"  at "%" prev  # C-S-F2
