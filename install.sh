@@ -18,5 +18,5 @@ fi
 echo "source ${DIR}/screenrc" > "${TARGET}"
 
 # link to screen-scripts dir
-ln -s -f "${DIR}/screen-scripts"   "${HOME}/.screen-scripts"
+ln -s -f -n "${DIR}/screen-scripts"   "${HOME}/.screen-scripts"
 
