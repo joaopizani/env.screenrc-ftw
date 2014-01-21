@@ -10,5 +10,13 @@ aclchg WRITERS +rw-x "#"
 aclchg WRITERS -rwx "?"
 aclchg WRITERS +x colon,license,windows,next,prev,select,other,detach,suspend,redisplay,lastmsg,windowlist,help,stuff
 
-aclumask "*"-rwx "${USER}+rwx" READERS+r-wx WRITERS+rw-x "?"-rwx "??"-rwx
+aclchg ADMINS +rwx "#"
+aclchg ADMINS +rwx "?"
+
+aclgrp "${USER}" ADMINS
+
+aclumask "*"-rwx ADMINS+rwx READERS+r-wx WRITERS+rw-x "?"-rwx "??"-rwx
+
+
+source "~/.screen-personalizations/multiuser-personalizations"
 
