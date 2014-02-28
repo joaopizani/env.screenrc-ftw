@@ -32,9 +32,6 @@ bindkey "^[[24;5~" paste .  # Ctrl-F12 pastes the screen buffer
 # navigation and region management keybindings
 source navbindings.rc
 
-# layout definitions
-source layouts.rc
-
 # bindings to activate scripts
 source script-bindings.rc
 
