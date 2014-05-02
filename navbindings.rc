@@ -12,17 +12,17 @@ bindkey "^[[1;6B" at "%" focus down
 
 # switch between windows or select a precise window to go to.
 # shift modifier to switch in ALL displays (including remote users).
-bindkey "^[O1;5Q"  prev  # C-F2
-bindkey "^[O1;5R"  next  # C-F3
-bindkey "^[O1;6Q"  at "%" prev  # C-S-F2
-bindkey "^[O1;6R"  at "%" next  # C-S-F3
+bindkey "^[[1;5Q"  prev  # C-F2
+bindkey "^[[1;5R"  next  # C-F3
+bindkey "^[[1;6Q"  at "%" prev  # C-S-F2
+bindkey "^[[1;6R"  at "%" next  # C-S-F3
 
-bindkey "^[O1;5S"  select 1  # C-F4
+bindkey "^[[1;5S"  select 1  # C-F4
 bindkey "^[[15;5~" select 2  # C-F5
 bindkey "^[[17;5~" select 3  # C-F6
 bindkey "^[[18;5~" select 4  # C-F7
 bindkey "^[[19;5~" select 5  # C-F8
-bindkey "^[O1;6S"  at "%" select 1  # C-S-F4
+bindkey "^[[1;6S"  at "%" select 1  # C-S-F4
 bindkey "^[[15;6~" at "%" select 2  # C-S-F5
 bindkey "^[[17;6~" at "%" select 3  # C-S-F6
 bindkey "^[[18;6~" at "%" select 4  # C-S-F7
@@ -36,7 +36,7 @@ bindkey "^[[21;6~" at "%" layout next  # C-S-F10
 
 # C-S-F1 enters resize mode. Resize regions with hjkl, toggle focus with Tab and arrows
 # C-a R enters resize mode for ALL displays, the commands are sent to all clients
-bindkey "^[O1;6P" eval "command -c rs"  # enters resize mode
+bindkey "^[[1;6P" eval "command -c rs"  # enters resize mode
 bind -c rs h     eval "resize -h -1" "command -c rs"  # h - decreases height
 bind -c rs j     eval "resize -v -1" "command -c rs"  # j - decreases width
 bind -c rs k     eval "resize -v +1" "command -c rs"  # k - increases height
