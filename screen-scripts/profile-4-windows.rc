@@ -1,9 +1,11 @@
 screen -t Shell1            1 bash
 screen -t Shell2            2 bash
 screen -t Shell3            3 bash
-screen -t Status            4 htop 2> /dev/null || top 2> /dev/null
+screen -t Status            4 bash
 
 select 0
 kill
 
 select 1
+
+at "4" stuff "htop 2> /dev/null || top 2> /dev/null^M"
